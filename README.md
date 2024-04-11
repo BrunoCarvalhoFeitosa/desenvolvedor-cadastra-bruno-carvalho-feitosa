@@ -1,76 +1,93 @@
-# Venha ser um desenvolvedor da Cadastra
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://cadastra.com/pt-br">
+    <img src="src\img\logo.png" alt="Logo" width="200" weight="200" />
+  </a>
 
-Olá! Somos a Cadastra, uma Next-Gen Company que oferece soluções globais em marketing, tecnologia, estratégia de negócios, commerce, dados e analytics. Este desafio é voltado para o nosso Centro de Excelência (COE) de Commerce, especializado em implantação, migração, evolução e otimização de e-commerce.  Contamos com escritórios em 5 países, mas num formato de trabalho 100% home office.
+  <p align="center">
+     Criação de um mini E-Commerce utilizando HTML5, Sass, Javascript, Typescript e Gulp.
+  </p>
+</p>
 
-Estamos em busca de Pessoas Desenvolvedoras `Front-end`, com sólidos conhecimentos em HTML, CSS e TS para projetar interfaces e entregar a melhor experiência para os consumidores visando sempre a otimização do código e agilidade no desenvolvimento.
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Sumário</summary>
+  <ol>
+    <li>
+      <a href="#sobre-o-projeto">Sobre o projeto</a>
+      <ul>
+        <li><a href="#feito-com">Feito com</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#iniciando-o-projeto">Iniciando o projeto</a>
+      <ul>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
+        <li><a href="#instalação">Instalação</a></li>
+      </ul>
+    </li>
+    <li><a href="#contato">Contato</a></li>
+  </ol>
+</details>
 
-## O que procuramos
+<!-- ABOUT THE PROJECT -->
+### Sobre o projeto
+O projeto foi construído com compiladores Javascript, sendo o Webpack e o Gulp. Estes compiladores têm por função interpretar códigos Javascript modernos e converter para Javascript "antigo", a fim de compatibilizar as aplicações com os diversos navegadores. Através do Gulp foram criadas rotinas para minificar CSS e também IMAGENS, visto que este era um ponto proposto no teste, para que eles não fiquem tão pesados na exibição do navegador e para a largura de banda da internet do usuário.
 
-### Requisitos Obrigatórios
+Através do layout proposto neste [link](https://www.figma.com/file/Z5RCG3Ewzwm7XIPuhMUsBZ/Desafio-Cadastra) foram feitas as funcionalidades solicitadas, como a apresentação dos produtos cadastrados em uma api local, filtragem por cor, tamanho e faixa de preço, bem como a ordenação por produtos mais recentes, menor preço, maior preço, além da adição destes produtos no carrinho exibindo o total das compras feitas pelo usuário. Toda a exibição do produto é dinâmica, ou seja, ao tentar comprar um produto sem selecionar uma cor ou tamanho o usuário é notificado através de um "toastify" para realizar a seleção do SKU, ao decorrer da seleção dos filtros, as opções são dinamicamente exibidas, ou seja, ao clicar em uma cor, os tamanhos disponíveis para ela ficam em evidência, as cores não disponíveis ficam indisponíveis para seleção, isso facilita a busca do usuário através de um controle de estoque do para aquele SKU, produtos sem estoque não devem ser vendidos ou apresentados.
 
-- Html5, css3;
-- Javascript/Typescript;
-- Consumo de APIs.
-- Versionamento Git;
-- Grunt/gulp;
-- Sass/less;
-- Nodejs
-- Sites responsivos;
-- Iniciativa, criatividade e colaboração;
-- Boas práticas: reutilização de código, semântica, organização, performance.
+### Aplicação desktop
 
-### Desejáveis:
+https://github.com/BrunoCarvalhoFeitosa/airbnb-clone/assets/46093815/964f70f4-4223-4c1e-9ccc-31399dd9aa85
 
-- Experiência com algum CMS
-- Conhecimento/Experiência em Vtex
-- Nodejs
+### Aplicação mobile
 
-----
+https://github.com/BrunoCarvalhoFeitosa/airbnb-clone/assets/46093815/f75039a8-8f80-42aa-8a0d-b7aa266a5f07
 
-## Como se candidatar a vaga
+### Feito com
 
-- [Crie um fork desse projeto;](https://github.com/Cadastra-Next-Gen-Company/desenvolvedor-cadastra/fork)
-- No seu fork, codifique o layout seguindo as instruções abaixo;
-- Atualize o readme com as instruções necessárias para rodar o seu código;
-- Adicione também seu e-mail de contato ao readme do projeto ( caso seu e-mail do github esteja privado )
-- envie para [vinicius.delfino@cadastra.com](mailto:vinicius.delfino@cadastra.com?subject=Vaga%20DEV%20-%20Cadastra)
+* [Webpack](https://webpack.js.org)
+* [Gulp](https://gulpjs.com)
+* [Typescript](https://www.typescriptlang.org)
+* [Toastify JS](https://apvarun.github.io/toastify-js/)
 
+<!-- GETTING STARTED -->
+## Iniciando o projeto
 
-**obs.**: link do projeto [github.com/Cadastra-Next-Gen-Company/desenvolvedor-cadastra](https://github.com/Cadastra-Next-Gen-Company/desenvolvedor-cadastra)
+Primeiramente será necessário clonar este projeto em (https://github.com/BrunoCarvalhoFeitosa/desenvolvedor-cadastra-bruno-carvalho-feitosa.git), após o download será necessário abrir este projeto no seu editor e no terminal digitar npm install, posteriormente é digite npm run dev em uma terminal e em outro npm run start para a api de produtos funcionar.
 
-### Instruções para o teste
+### Pré-requisitos
 
-O layout se encontra no [figma](https://www.figma.com/file/Z5RCG3Ewzwm7XIPuhMUsBZ/Desafio-Cadastra?type=design&node-id=0%3A1&mode=design&t=A0G2fRjMSrcQjchw-1).
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-### Dependências
+### Instalação
 
-O projeto possui um setup pronto no qual há a necessidade de possuir o nodejs instalado na versão 14 ou superior.
+1. Clone o repositório
+   ```sh
+   git clone https://github.com/BrunoCarvalhoFeitosa/desenvolvedor-cadastra-bruno-carvalho-feitosa.git
+   ```
+2. Instale os pacotes do NPM
+   ```sh
+   npm install
+   ```
+   
+3. Inicie o projeto
+   ```sh
+   npm run dev
+   ```
 
-Para instalar as dependências só é preciso executar o comando: `npm install`
+4. Inicie a api de produtos
+   ```sh
+   npm run start
+   ```
 
-O dar start no server e nos processos para desenvolvimento é necessário rodar o comando: `npm start `
+<!-- CONTACT -->
+## Contato
 
-Uma ver que o comando é dado ele irá levantar 2 servidores, sendo eles:
- - um para acessar o front-end que roda na porta 3000. No qual pode ser acessado pela url: http://localhost:3000
- - um para o json-server que irá export uma api com a lista de produtos que roda na porta 5000. Para acessar os produtos é na url:  http://localhost:5000/products
+Bruno Carvalho Feitosa - [GitHub](https://github.com/BrunoCarvalhoFeitosa) - [LinkedIn](https://www.linkedin.com/in/bruno-carvalho-feitosa/)
 
-### Objetivo
-
-O objetivo desse desafio é avaliar a seus conhecimentos fundamentais de front end, por isso pedimos que não utilize nenhum framework, porem caso deseje utilizar frameworks como react, é possível adicionar ao setup.
-### Obrigatório
-
-- HTML5 e CSS3
-- Typescript
-- Requisição a API para obter os produtos
-- Funcionalidade: Filtrar produtos por cor, tamanho e preço.
-- Funcionalidade: Adicionar produto ao carrinho.
-- Funcionalidade: Carregar mais produtos.
-- Não utilizar Bootstrap, Foundation Css, Semantic ui ou semelhantes ;
-- Responsividade
-
-#### Bônus
-
-- Typescript com clean code
-- Adição de processo no gulp para otimizar imagens
-
-##### Dúvidas: [vinicius.delfino@cadastra.com](mailto:vinicius.delfino@cadastra.com?subject=Dúvida%20Vaga%20DEV%20-%20Cadastra)
+E-mail para contato: brunocarvalhofeitosa@outlook.com
