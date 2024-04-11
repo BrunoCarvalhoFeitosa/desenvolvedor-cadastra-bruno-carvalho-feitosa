@@ -45,6 +45,12 @@ https://github.com/BrunoCarvalhoFeitosa/airbnb-clone/assets/46093815/964f70f4-42
 
 https://github.com/BrunoCarvalhoFeitosa/airbnb-clone/assets/46093815/f75039a8-8f80-42aa-8a0d-b7aa266a5f07
 
+### Imagem sem minificação na pasta src
+![imagem-src](https://github.com/BrunoCarvalhoFeitosa/airbnb-clone/assets/46093815/81e270c5-9bfe-4e50-b6bc-d3073534f2f5)
+
+### Imagem com minificação na pasta dist
+![imagem-dist](https://github.com/BrunoCarvalhoFeitosa/airbnb-clone/assets/46093815/f2f0507d-19d8-419e-8452-785e525bec82)
+
 ### Feito com
 
 * [Webpack](https://webpack.js.org)
