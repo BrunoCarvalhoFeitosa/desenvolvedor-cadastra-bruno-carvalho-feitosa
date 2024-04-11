@@ -1,0 +1,215 @@
+.main {
+    margin: 30px auto;
+    max-width: 1280px;
+    min-height: calc(100dvh - 60px);
+
+    @media only screen and (min-width: 320px) and (max-width: 680px) {
+        padding: 15px 8px;
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 1280px) {
+        padding: 15px 22px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: 1023px) {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &-title {
+            h1 {
+                font-family: "Open Sans", sans-serif;
+                font-size: 32px;
+                font-weight: 400;
+                line-height: 43.58px;
+                color: #333;
+            }
+        }
+
+        &-filters {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media only screen and (max-width: 1023px) {
+                width: 92%;
+            }
+        }
+
+        &-open {
+            width: 142px;
+            height: 42px;
+            display: none;
+
+            @media only screen and (max-width: 1023px) {
+                display: block;
+                width: 100%;
+            }
+
+            &__action {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                font-family: "Open Sans", sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 21.79px;
+                color: #000;
+                border: 1px solid #000;
+                background-color: #FFF;
+                cursor: pointer;
+
+                @media only screen and (max-width: 1024px) {
+                    font-size: 24px;
+                    color: #666;
+                    border: 1px solid #666;
+                }
+            }
+        }
+
+        &-orderBy {
+            @media only screen and (max-width: 1024px) {
+                width: 100%;
+            }
+
+            &__container {
+                width: 142px;
+                height: 42px;
+
+                @media only screen and (max-width: 1024px) {
+                    width: 100%;
+                }
+                
+                &-action {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 21.79px;
+                    color: #000;
+                    border: 1px solid #000;
+                    background-color: #FFF;
+                    cursor: pointer;
+                    
+                    @media only screen and (max-width: 1024px) {
+                        font-size: 24px;
+                        color: #666;
+                        border: 1px solid #666;
+                        > div {
+                            display: none;
+                        }
+                    }
+                }
+
+                &-content {
+                    display: none;
+                    position: relative;
+                    border: 1px solid #000;
+                    background-color: #FFF;
+                    z-index: 1;
+
+                    &.active {
+                        display: block;
+                     
+                        @media only screen and (max-width: 1023px) {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #FFF;
+                            border: none;
+                            z-index: 9999;
+                        }
+                    }
+
+                    &__close {
+                        margin-bottom: 30px;
+                        padding: 10px 14px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-bottom: 1px solid #000;
+
+                        @media only screen and (min-width: 1024px) {
+                            display: none;
+                        }
+
+                        h4 {
+                            font-family: "Open Sans", sans-serif;
+                            font-size: 28px;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                            line-height: 38.13px;
+                            color: #000;
+                        }
+
+                        button {
+                            background-color: #FFF;
+                            border: none;
+                            cursor: pointer;
+                        }
+                    }   
+                    
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        
+                        @media only screen and (max-width: 1024px) {
+                            gap: 20px;
+                        }
+
+                        li {
+                            padding: 5px 10px;
+                            font-family: "Open Sans", sans-serif;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 21.79px;
+                            cursor: pointer;
+
+                            @media only screen and (max-width: 1024px) {
+                                font-size: 22px;
+                            }
+
+                            &:hover {
+                                background-color: #FB953E;
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+
+                span {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        padding: 60px 0;
+
+        &-wrapper {
+            display: flex;
+            gap: 140px;
+
+            @media only screen and (max-width: 640px) {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    }
+}

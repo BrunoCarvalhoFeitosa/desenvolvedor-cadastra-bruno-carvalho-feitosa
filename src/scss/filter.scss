@@ -1,0 +1,346 @@
+.main {
+    &__content {
+        &-wrapper {
+            &__filter {
+                display: flex;
+                opacity: 1;
+                visibility: visible;
+                flex-direction: column;
+                width: 157px;
+                transition: all .8s;
+            
+                @media only screen and (max-width: 1024px) {
+                    display: none;
+                    
+                    &.active {
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        position: fixed;
+                        left: 0;
+                        top: 0;
+                        background: #fff;
+                        z-index: 99999;
+                    }
+                }
+            
+                h2 {
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    line-height: 21.79px;
+                    letter-spacing: 5%;
+                    color: #333;
+            
+                    img {
+                        display: none;
+                    }
+            
+                    @media only screen and (max-width: 1024px) {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-size: 24px;
+            
+                        img {
+                            display: block;
+                            width: 17px;
+                        }
+                    }
+                }
+            
+                &-close {
+                    margin-bottom: 30px;
+                    padding: 10px 14px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #000;
+            
+                    @media only screen and (min-width: 1024px) {
+                        display: none;
+                    }
+            
+                    h4 {
+                        font-family: "Open Sans", sans-serif;
+                        font-size: 28px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        line-height: 38.13px;
+                        color: #000;
+                    }
+            
+                    button {
+                        background-color: #FFF;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            
+                &-wrapper {
+                    @media only screen and (max-width: 1024px) {
+                        max-height: 75%;
+                        overflow-y: auto;
+                    }
+                }
+            
+                &-colors,
+                &-prices {
+                    ul {
+                        margin-top: 16px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+            
+                        @media only screen and (max-width: 1024px) {
+                            margin-top: 25px;
+                            display: none;
+            
+                            &.active {
+                                display: flex;
+                            }
+                        }
+            
+                        li {
+                            width: fit-content;
+
+                            > div {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+    
+                                &.not-available {
+                                    opacity: .2;
+                                    cursor: not-allowed;
+
+                                    input,
+                                    label {
+                                        pointer-events: none;
+                                    }
+                                }
+                            }
+            
+                            &:hover {
+                                input[type="radio"] {
+                                    &::after {
+                                        content: "";
+                                        display: block;
+                                        width: 10px;
+                                        height: 10px;
+                                        background-color: #FB953E;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                }
+                            }
+            
+                            input[type="radio"] {
+                                all: unset;
+                                position: relative;
+                                width: 16px;
+                                height: 16px;
+                                border: 1px solid #000;
+                                cursor: pointer;
+            
+                                &:checked {
+                                    &::after {
+                                        content: "";
+                                        display: block;
+                                        width: 10px;
+                                        height: 10px;
+                                        background-color: #FB953E;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                }
+                            }
+            
+                            label {
+                                font-family: "Open Sans", sans-serif;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 14px;
+                                color: #000;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+                &-prices {
+                    ul {
+                        li {
+                            > div {
+                                &.not-available {
+                                    input {
+                                        &:checked {
+                                            &::after {
+                                                border: none;
+                                                background-color: #FFF;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            
+                &-sizes {
+                    margin: 30px 0;
+            
+                    @media only screen and (max-width: 1024px) {
+                        margin: 38px 0;
+                    }
+            
+                    ul {
+                        margin-top: 16px;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 8px;
+                        width: fit-content;
+            
+                        @media only screen and (max-width: 1024px) {
+                            margin-top: 25px;
+                            display: none;
+            
+                            &.active {
+                                display: grid;
+                            }
+                        }
+            
+                        li {
+                            > div {
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                width: fit-content;
+                                cursor: pointer;
+
+                                &.available {
+                                    cursor: pointer;
+                                }
+    
+                                &.not-available {
+                                    opacity: .2;
+                                    pointer-events: none;
+
+                                    input {
+                                        &:checked {
+                                            &::after {
+                                                border: 1px solid #000 !important;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                input[type="radio"] {
+                                    all: unset;
+                                    position: relative;
+                                    width: 32px;
+                                    height: 32px;
+                                    border: 1px solid #000;
+                                    z-index: 2;
+                
+                                    &:checked {
+                                        &::after {
+                                            content: "";
+                                            display: block;
+                                            width: 32px;
+                                            height: 32px;
+                                            border: 1px solid #FB953E;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                        }
+                                    }
+                                }
+                
+                                label {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    font-family: "Open Sans", sans-serif;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 14px;
+                                    color: #000;
+                                    z-index: 1;
+                                }
+                            }
+
+            
+                            &:hover {
+                                input[type="radio"] {
+                                    &::after {
+                                        content: "";
+                                        display: block;
+                                        width: 32px;
+                                        height: 32px;
+                                        border: 1px solid #FB953E;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                }
+                            }
+            
+                            
+                        }
+                    }
+                }
+            
+                &-colors,
+                &-prices,
+                &-sizes {
+                    @media only screen and (max-width: 1023px) {
+                        padding: 0 14px;
+                    }
+                }
+            
+                &-actions {
+                    margin-top: auto;
+                    padding: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 22px;
+            
+                    button {
+                        width: 100%;
+                        height: 40px;
+                        font-family: "Open Sans", sans-serif;
+                        font-size: 16px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                    }
+                    
+                    &__apply {
+                        border: none;
+                        background-color: #FB953E;
+                        color: #FFF;
+                    }
+            
+                    &__clear {
+                        background-color: #FFF;
+                        border: 1px solid #000;
+                        counter-reset: #000;
+                    }
+            
+                    @media only screen and (min-width: 1025px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

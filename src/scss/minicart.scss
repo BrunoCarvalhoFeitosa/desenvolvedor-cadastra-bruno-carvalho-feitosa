@@ -1,0 +1,198 @@
+.minicart {
+    width: 100%;
+    height: 100%;
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 999;
+        transform: translateX(110%);
+        transition: transform .65s;
+        cursor: pointer;
+
+        &.active {
+            transform: translateX(0px);
+        }
+    }
+
+    &__result {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        transform: translateX(110%);
+        flex-direction: column;
+        width: 400px;
+        height: 100%;
+        background: #FFF;
+        box-shadow: 0px 10px 6px 0px rgba(0, 0, 0, 0.75);
+        transition: transform .8s;
+        z-index: 9999;
+    
+        @media only screen and (max-width: 680px) {
+            width: 90%;
+        }
+    
+        &.active {
+            transform: translateX(0px);
+        }
+    }
+    
+    &__close {
+        padding: 12px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        button {
+            background-color: #FFF;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    &__content {
+        margin: 30px 0;
+        padding: 0 10px;
+        max-height: 100%;
+        overflow-y: auto;
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            
+            &__item {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            &__container {
+                display: flex;
+                gap: 10px;
+            }
+
+            &__image {
+                img {
+                    width: 80px;
+                    height: 80px;
+                    object-fit: contain;
+                }
+            }
+    
+            &__info {
+                h3 {
+                    margin-bottom: 4px;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: #000;
+                }
+                
+                p {
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #000;
+                }
+
+                span {
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #666;
+                }
+            }
+
+            &__delete {
+                button {
+                    background-color: #FFF;
+                    border: none;
+                    cursor: pointer;
+
+                    img {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__footer {
+        margin-top: auto;
+    }
+
+    &__resume {
+        border-top: 1px solid #DDD;
+        padding: 14px 14px 0;
+
+        > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        p {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+        }
+    }
+
+    &__shop {
+        padding: 14px 14px 0;
+
+        @media only screen and (max-width: 1024px) {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            height: 33px;
+            border: 1px solid #000;
+            background-color: #FFF;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #000;
+            cursor: pointer;
+        }
+    }
+
+    &__checkout {
+        padding: 14px;
+
+        @media only screen and (max-width: 1024px) {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            height: 33px;
+            border: none;
+            background-color: #FB953E;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #FFF;
+            cursor: pointer;
+        }
+    }
+}

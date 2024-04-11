@@ -1,19 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Bruno Carvalho Feitosa" />
+    <meta name="description" content="Teste para desenvolvedor Front-end Cadastra" />
+    <link rel="icon" type="image/png" href="/img/fav.png" />
+    <title>Cadastra Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor Cadastra</title>
-  <link rel="stylesheet" href="main.css" />
-</head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__wrapper-logo">
+          <a href="/">
+            <img src="./img/logo.png" alt="Cadastra" title="Cadastra" />
+          </a>
+        </div>
+        <div class="header__wrapper-cart">
+          <button>
+            <img src="./img/cart-icon.png" alt="Carrinho" title="Carrinho" />
+            <div class="header__wrapper-indicator">
+              0
+            </div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__header">
+        <div class="main__header-title">
+          <h1>Blusas</h1>
+        </div>
+        <div class="main__header-filters">
+          <div class="main__header-open">
+            <button class="main__header-open__action">
+              Filtrar
+            </button>
+          </div>
+          <div class="main__header-orderBy">
+            <div class="main__header-orderBy__container">
+              <button class="main__header-orderBy__container-action">
+                <span>Ordenar </span>
+                <div>
+                  por: 
+                  <img src="./img/arrow-down.png" />
+                </div>
+              </button>
+              <div class="main__header-orderBy__container-content">
+                <div class="main__header-orderBy__container-content__close">
+                  <h4>
+                    Ordenar
+                  </h4>
+                  <button>
+                    <img src="./img/close-icon.png" alt="Fechar" title="Fechar" />
+                  </button>
+                </div>
+                <ul>
+                  <li id="most-recent">
+                    Mais recentes
+                  </li>
+                  <li id="lowest-price">
+                    Menor preço
+                  </li>
+                  <li id="highest-price">
+                    Maior preço
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="main__content">
+        <div class="main__content-wrapper">
+          <aside class="main__content-wrapper__filter">
+            <div class="main__content-wrapper__filter-close">
+              <h4>
+                Filtrar
+              </h4>
+              <button>
+                <img src="./img/close-icon.png" alt="Fechar" title="Fechar" />
+              </button>
+            </div>
+            <div class="main__content-wrapper__filter-wrapper">
+              <div class="main__content-wrapper__filter-colors">
+                <h2>
+                  Cores
+                  <img src="./img/arrow-down.png" />
+                </h2>
+                <ul class="colors-list" />
+              </div>
+              <div class="main__content-wrapper__filter-sizes">
+                <h2>
+                  Tamanhos
+                  <img src="./img/arrow-down.png" />
+                </h2>
+                <div>
+                  <ul class="sizes-list" />
+                </div>
+              </div>
+              <div class="main__content-wrapper__filter-prices">
+                <h2>
+                  Faixa de preço
+                  <img src="./img/arrow-down.png" />
+                </h2>
+                <ul class="prices-list" />
+              </div>
+            </div>
+            <div class="main__content-wrapper__filter-actions">
+              <button class="main__content-wrapper__filter-actions__apply">
+                Aplicar
+              </button>
+              <button class="main__content-wrapper__filter-actions__clear">
+                Limpar
+              </button>
+            </div>
+          </aside>
+          <div class="main__content-wrapper__container">
+            <div class="main__content-wrapper__clothes">
+              <ul class="main__content-wrapper__clothes-ul" />
+            </div>
+            <div class="main__content-wrapper__showMore">
+              <button>
+                Carregar mais
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="minicart">
+      <div class="minicart__overlay"></div>
+      <div class="minicart__result">
+        <div class="minicart__close">
+          <h3>
+            Carrinho
+          </h3>
+          <button>
+            <img src="./img/close-icon.png" alt="Fechar" title="Fechar" />
+          </button>
+        </div>
+        <div class="minicart__content">
+          <ul class="minicart__content-list" />
+        </div>
+        <div class="minicart__footer">
+          <div class="minicart__resume">
+            <div>
+              <p>Total</p>
+              <p class="total" />
+            </div>
+          </div>
+          <div class="minicart__shop">
+            <button>
+              Continuar comprando
+            </button>
+          </div>
+          <div class="minicart__checkout">
+            <button>
+              Ir para o checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <h4>
+        Cadastra: Implantação de E-commerce VTEX
+      </h4>
+    </footer>
+  </body>
 
-<body>
-
-</body>
-<h1>Desafio Cadastra</h1>
-
-<script src="bundle.js"></script>
-
+  <script src="bundle.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </html>

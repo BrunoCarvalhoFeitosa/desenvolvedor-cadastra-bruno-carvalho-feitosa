@@ -1,0 +1,54 @@
+.header {
+    padding: 15px 0;
+    border-bottom: 2px solid #C7C7C7;
+
+    @media only screen and (max-width: 1280px) {
+        padding: 15px 22px;
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 1280px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 640px) {
+            max-width: none;
+        }
+
+        &-logo {
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &-cart {
+            position: relative;
+
+            button {
+                background-color: #FFF;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        &-indicator {
+            position: absolute;
+            bottom: 0;
+            right: -4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            background-color: #FB953E;
+            font-family: "Roboto", sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 11.72px;
+            color: #FFF;
+        }
+    }
+}

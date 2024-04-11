@@ -2,9 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = (paths) => ({
-  entry: {
-    main: path.resolve(__dirname, paths.scripts.src),
-  },
+  entry: "./src/ts/index.ts",
   output: {
     path: path.resolve(__dirname, paths.dest),
     filename: "bundle.js",
@@ -15,10 +13,12 @@ module.exports = (paths) => ({
       {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /(node_modules|bower_components)/,
-        include: path.resolve(__dirname, paths.scripts.src),
         use: "ts-loader",
       },
     ],
+  },
+  resolve: {
+    extensions: [".ts", ".js"],
   },
   plugins: [],
 });
